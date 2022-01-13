@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import Hero from './Component/Home/hero';
+import Home from './Component/Home/Home';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route path = '/' element = {<Hero />} />
+        <Route path = '/' element = {<Home />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,

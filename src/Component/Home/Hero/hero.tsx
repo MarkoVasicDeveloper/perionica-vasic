@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../Header/header';
+import Header from '../../Header/header';
 import './Hero.scss';
-import img1 from '../../Img/spoljasnje-pranje-vozila-1.jpg';
-import img1_2 from '../../Img/spoljasnje-pranje-vozila-2.jpg';
-import img1_3 from '../../Img/spoljasnje-pranje-vozila-3.jpg';
-import img2_1 from '../../Img/pranje-tepiha-finish-1.jpg';
-import img2_2 from '../../Img/pranje-tepiha-finish-2.jpg';
-import img2_3 from '../../Img/pranje-tepiha-finish-3.jpg';
-import img3_1 from '../../Img/car_polishing-1.jpg';
-import img3_2 from '../../Img/car_polishing-2.jpg';
-import img3_3 from '../../Img/car_polishing-3.jpg';
-import img4_1 from '../../Img/polishing-light-1.jpg';
-import img4_2 from '../../Img/polishing-light-2.jpg';
-import img4_3 from '../../Img/polishing-light-3.jpg';
-import img5_1 from '../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-1.jpg';
-import img5_2 from '../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-2.jpg';
-import img5_3 from '../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-3.jpg';
+import img1 from '../../../Img/spoljasnje-pranje-vozila-1.jpg';
+import img1_2 from '../../../Img/spoljasnje-pranje-vozila-2.jpg';
+import img1_3 from '../../../Img/spoljasnje-pranje-vozila-3.jpg';
+import img2_1 from '../../../Img/pranje-tepiha-finish-1.jpg';
+import img2_2 from '../../../Img/pranje-tepiha-finish-2.jpg';
+import img2_3 from '../../../Img/pranje-tepiha-finish-3.jpg';
+import img3_1 from '../../../Img/car_polishing-1.jpg';
+import img3_2 from '../../../Img/car_polishing-2.jpg';
+import img3_3 from '../../../Img/car_polishing-3.jpg';
+import img4_1 from '../../../Img/polishing-light-1.jpg';
+import img4_2 from '../../../Img/polishing-light-2.jpg';
+import img4_3 from '../../../Img/polishing-light-3.jpg';
+import img5_1 from '../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-1.jpg';
+import img5_2 from '../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-2.jpg';
+import img5_3 from '../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-3.jpg';
 
 export default function Hero() {
     const [margin, setMargin] = useState(-400);
