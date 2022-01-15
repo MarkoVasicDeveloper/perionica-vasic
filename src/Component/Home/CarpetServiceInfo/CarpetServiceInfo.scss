@@ -1,0 +1,69 @@
+@import "../../../Style/styleConfig.scss";
+
+#carpetServiceInfo {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  // flex-direction: column;
+
+  .carpetInfo {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    background-color: $secondaryColor;
+    color: $blackFont;
+    font-family: $primaryFont;
+    text-align: center;
+    padding: 1rem 1rem;
+    display: grid;
+    grid-template-rows: "one two three four five six";
+
+    .carpetServiceSlogan {
+      grid-area: "one";
+      h3 {
+        margin-top: 3rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .carpetServiceTitle {
+      grid-area: "two";
+      width: 50%;
+      margin: 0 auto;
+      h2 {
+        border-bottom: 2px solid $primaryColor;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .carpetServiceInfoParagraf {
+      grid-area: "three four five";
+    }
+
+    .carpetServiceButton {
+      grid-area: "six";
+      button {
+        width: 80%;
+        height: 50%;
+        background-color: transparent;
+        border: 1px solid $primaryColor;
+        border-radius: 20px;
+
+        a {
+          text-decoration: none;
+          color: $primaryColor;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .carpetPhotoInfo {
+    width: 100%;
+    flex-grow: 1;
+    height: 100%;
+    background-image: url("../../../Img/pranje-tepiha-finish.jpg");
+  }
+}
