@@ -1,0 +1,84 @@
+@import "../../../Style/styleConfig.scss";
+
+#deepWash {
+  width: 100%;
+  height: 100vh;
+  background-color: $primaryColor;
+  @include flexCenter();
+  justify-content: space-evenly;
+  gap: 7rem;
+  padding: 5% 13% 5%;
+
+  .deepWashCar {
+    flex-grow: 1;
+    height: 100%;
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 70%;
+        height: 2rem;
+        margin-top: 1rem;
+        background-color: $secondaryColor;
+        border: transparent;
+        border-radius: 20px;
+
+        a {
+          color: $blackFont;
+          text-decoration: none;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .deepWashContainer {
+      border: 1px solid $secondaryColor;
+      border-radius: 20px;
+      width: 100%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+
+      .deepWashCarPhoto,
+      .deepWashFurniturePhoto {
+        flex-grow: 1;
+        flex-basis: 0;
+        background-image: url("../../../Img/dubinsko-pranje-auta-pre.jpg");
+        background-size: cover;
+        background-position: center;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+      }
+
+      .deepWashFurniturePhoto {
+        background-image: url("../../../Img/dubinsko-pranje-namestaj-pre.jpg");
+        background-position: center bottom;
+      }
+
+      .deepWashInfo {
+        flex-grow: 1;
+        flex-basis: 0;
+        text-align: center;
+        color: $fontColor;
+        font-family: $primaryFont;
+        div {
+          width: 70%;
+          height: 50%;
+          margin: 0 auto;
+          padding-top: 2rem;
+
+          h2 {
+            font-size: 1.7rem;
+          }
+        }
+
+        .deepWashParagraf {
+          width: 90%;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

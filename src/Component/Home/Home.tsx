@@ -1,5 +1,6 @@
 import React from 'react';
 import CarpetServiceInfo from './CarpetServiceInfo/CarpetServiceInfo';
+import DeepWash from './DeepWash/DeepWash';
 import Hero from './Hero/hero';
 import Service from './Service/Service';
 import Slogan from './Slogan/Slogan';
@@ -13,6 +14,7 @@ function Home() {
             <Slogan />
             <TrackService />
             <CarpetServiceInfo />
+            <DeepWash />
         </div>
     )
 }
