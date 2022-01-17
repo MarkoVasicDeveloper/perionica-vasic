@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import CarpetServiceInfo from './CarpetServiceInfo/CarpetServiceInfo';
 import DeepWash from './DeepWash/DeepWash';
 import Hero from './Hero/hero';
@@ -15,6 +16,7 @@ function Home() {
             <TrackService />
             <CarpetServiceInfo />
             <DeepWash />
+            <Footer />
         </div>
     )
 }

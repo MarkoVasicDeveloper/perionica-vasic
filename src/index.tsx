@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import CarpetWashing from './Component/CarpetWashing/CarpetWashing';
 import Home from './Component/Home/Home';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,6 +10,7 @@ ReactDOM.render(
     <HashRouter>
       <Routes>
         <Route path = '/' element = {<Home />} />
+        <Route path = '/pranje-tepiha' element = {<CarpetWashing />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
