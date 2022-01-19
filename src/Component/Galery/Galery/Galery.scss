@@ -1,0 +1,59 @@
+@import "../../../Style/styleConfig.scss";
+
+#galery {
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 2rem;
+
+  background-image: url("../../../Img/car_polishing-blur.jpg");
+  background-size: cover;
+
+  .galery-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .btn-back,
+    .btn-forward {
+      flex-grow: 1;
+      flex-basis: 0;
+      height: 80%;
+      @include flexCenter();
+      button {
+        font-size: 3rem;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+      }
+    }
+
+    .galery-img {
+      flex-grow: 6;
+      flex-basis: 0;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      .div-img {
+        height: 80%;
+        display: flex;
+        transition: 500ms ease;
+
+        div {
+          @include flexCenter();
+          transition: 500ms ease;
+
+          &:hover {
+            transform: rotateY(20deg);
+            transition: 500ms ease;
+          }
+          img {
+            width: 80%;
+            height: 80%;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
