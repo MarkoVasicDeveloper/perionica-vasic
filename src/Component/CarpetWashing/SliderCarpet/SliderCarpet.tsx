@@ -9,19 +9,18 @@ function SliderCarpet() {
     const imageDiv = useRef(null) as any
     const [margin, setMargin] = useState(0)
     const [transition, setTransition] = useState(true)
-    const [width, setWidth] = useState(window.screen.availWidth)
+    const [width, setWidth] = useState(0)
 
     useEffect(() => {
-        if(window.screen.availWidth > 1200) {
-            setWidth(window.screen.availWidth / 2)
-        }
+        setWidth(imageDiv.current.getBoundingClientRect().width)
+        
         const interval = setInterval(() => {
-            setMargin(margin - width)
             if(margin === -(width * 4)) {
-                setMargin(0)
                 setTransition(false)
+                setMargin(0)
             }else{
                 setTransition(true)
+                setMargin(margin - width)
             }
         }, (margin === -(width * 4)) ? 500 : 3000)
         return () => {
@@ -46,20 +45,20 @@ function SliderCarpet() {
             </div>
             <div className="slider"  ref={imageDiv}>
                 <div className="imageContainer" style={{marginLeft: margin + 'px', transition: (transition) ? '500ms ease' : 'none'}}>
-                    <div>
-                        <img style={{height: '300px'}} src={img} alt="centrifuga-masina-za-cedjenje-tepiha" />
+                    <div style={{width: width}}>
+                        <img src={img} alt="centrifuga-masina-za-cedjenje-tepiha" />
                     </div>
-                    <div>
+                    <div style={{width: width}}>
                         <img src={img2} alt="kalorifer" />
                     </div>
-                    <div>
-                        <img style={{width: '300px'}} src={img3} alt="vlagara-masina-za-isusivanje-i-odstanjanje-vlage" />
+                    <div style={{width: width}}>
+                        <img  src={img3} alt="vlagara-masina-za-isusivanje-i-odstanjanje-vlage" />
                     </div>
-                    <div>
+                    <div style={{width: width}}>
                         <img src={img4} alt="cetkara-masina-za-cetkanje-tepiha" />
                     </div>
-                    <div>
-                        <img style={{height: '300px' }} src={img} alt="centrifuga-masina-za-cedjenje-tepiha" />
+                    <div style={{width: width}}>
+                        <img src={img} alt="centrifuga-masina-za-cedjenje-tepiha" />
                     </div>
                 </div>
             </div>

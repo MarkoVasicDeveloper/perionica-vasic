@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import CarpetWashing from './Component/CarpetWashing/CarpetWashing';
-import Home from './Component/Home/Home';
+import CarpetWashingPage from './Component/CarpetWashing/CarpetWashingPage';
+import DeepWashingPage from './Component/DeepWashing/DeepWashingPage';
+import HomePage from './Component/Home/HomePage';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route path = '/' element = {<Home />} />
-        <Route path = '/pranje-tepiha' element = {<CarpetWashing />} />
+        <Route path = '/' element = {<HomePage />} />
+        <Route path = '/pranje-tepiha' element = {<CarpetWashingPage />} />
+        <Route path = '/dubinsko-pranje' element = {<DeepWashingPage />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
