@@ -1,7 +1,7 @@
 @import "../../../Style/styleConfig.scss";
 #slogan {
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   background-image: url("../../../Img/bezkontaktno-pranje-vozila.jpg");
   background-size: cover;
   background-position: center top;
@@ -68,7 +68,7 @@
   }
 
   .animateSloganInfo {
-    animation: animateSloganInfo 2000ms ease 4000ms forwards;
+    animation: animateSloganInfo 2000ms ease 2000ms forwards;
   }
 
   @keyframes animateSlogan {
@@ -123,6 +123,127 @@
   }
 
   .animateSloganContainer {
-    animation: animateSlogan 3000ms ease 1000ms forwards;
+    animation: animateSlogan 2000ms ease 300ms forwards;
+  }
+}
+
+@media (max-width: 1000px) {
+  @keyframes animateSlogan {
+    0% {
+      left: 20%;
+      right: 80%;
+      opacity: 1;
+    }
+    50% {
+      left: 20%;
+      right: 20%;
+      opacity: 1;
+    }
+    100% {
+      left: 40%;
+      right: 20%;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  @keyframes animateSlogan {
+    0% {
+      left: 20%;
+      right: 80%;
+      opacity: 1;
+    }
+    50% {
+      left: 20%;
+      right: 20%;
+      opacity: 1;
+    }
+    100% {
+      left: 40%;
+      right: 10%;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  @keyframes animateSlogan {
+    0% {
+      left: 20%;
+      right: 80%;
+      opacity: 1;
+    }
+    50% {
+      left: 20%;
+      right: 20%;
+      opacity: 1;
+    }
+    100% {
+      left: 30%;
+      right: 10%;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  @keyframes animateSlogan {
+    0% {
+      left: 20%;
+      right: 80%;
+      opacity: 1;
+    }
+    50% {
+      left: 20%;
+      right: 20%;
+      opacity: 1;
+    }
+    100% {
+      left: 15%;
+      right: 10%;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  @keyframes animateSlogan {
+    0% {
+      left: 20%;
+      right: 80%;
+      opacity: 1;
+    }
+    50% {
+      left: 20%;
+      right: 20%;
+      opacity: 1;
+    }
+    100% {
+      left: 5%;
+      right: 5%;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  @keyframes animateSlogan {
+    0% {
+      left: 20%;
+      right: 80%;
+      opacity: 1;
+    }
+    50% {
+      left: 20%;
+      right: 20%;
+      opacity: 1;
+    }
+    100% {
+      left: 1%;
+      right: 1%;
+      bottom: 5%;
+      opacity: 1;
+    }
   }
 }

@@ -36,3 +36,17 @@
     }
   }
 }
+
+@media (max-width: 760px) {
+  #footer {
+    flex-direction: column;
+    height: 100vh;
+    .footer-info {
+      .text {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import CarpetWashingPage from './Component/CarpetWashing/CarpetWashingPage';
+import ContactPage from './Component/Contact/ContactPage';
 import DeepWashingPage from './Component/DeepWashing/DeepWashingPage';
 import GaleryPage from './Component/Galery/GaleryPage';
 import HomePage from './Component/Home/HomePage';
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route path = '/pranje-tepiha' element = {<CarpetWashingPage />} />
         <Route path = '/dubinsko-pranje' element = {<DeepWashingPage />} />
         <Route path = '/galerija' element = {<GaleryPage />} />
+        <Route path = '/kontakt' element = {<ContactPage />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,

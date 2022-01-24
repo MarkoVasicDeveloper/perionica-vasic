@@ -1,11 +1,15 @@
-import React from 'react'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Header.scss'
 
 function Header() {
 
+    const [showNav, setShowNav] = useState(false);
+
     const links = [
-        {id: 1, text: 'Home', link: '/home'},
+        {id: 1, text: 'Home', link: '/'},
         {id: 2, text: 'Pranje tepiha', link: '/pranje-tepiha'},
         {id: 3, text: 'Dubinsko pranje', link: '/dubinsko-pranje'},
         {id: 4, text: 'Galerija', link: '/galerija'},
@@ -20,7 +24,12 @@ function Header() {
                 </div>
             </div>
             <div className='nav-holder'>
-                <nav className='navigation'>
+                <button className="buttonMenu"
+                    onClick={() => setShowNav(!showNav)}
+                >
+                    <FontAwesomeIcon icon={faBars} />
+                </button>
+                <nav className={(showNav) ? 'showNavClass' : 'navigation'}>
                     <ul>
                         {links.map((link) => (
                             <li key={link.id} >

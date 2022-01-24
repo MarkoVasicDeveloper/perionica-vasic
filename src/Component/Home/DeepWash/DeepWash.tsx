@@ -20,7 +20,7 @@ function DeepWash() {
                 </div>
                 <div className='button'>
                     <button>
-                        <a href="/#">Detaljnije...</a>
+                        <a data-testid='linkFirstDeepWashingButton' href="/#/dubinsko-pranje">Detaljnije...</a>
                     </button>
                 </div>
             </div>
@@ -40,7 +40,7 @@ function DeepWash() {
                 </div>
                 <div className='button'>
                     <button>
-                        <a href="/#">Detaljnije...</a>
+                        <a data-testid='linkSecondDeepWashingButton' href="/#/dubinsko-pranje">Detaljnije...</a>
                     </button>
                 </div>
             </div>

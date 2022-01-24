@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../Footer/Footer'
 import Header from '../Header/header'
 import CarpetWashingSlogan from './CarpetWashingSlogan/CarpetWashingSlogan'
@@ -9,6 +9,13 @@ import { explanationItem } from '../PropsConfig/ExplanationProps'
 import { howWeDoProps } from '../PropsConfig/HowWeDoProps'
 
 function CarpetWashing() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+      
+        return () => {
+          
+        };
+      }, []);
     return (
         <div>
             <Header />

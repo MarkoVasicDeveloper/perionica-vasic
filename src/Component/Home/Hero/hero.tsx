@@ -24,6 +24,7 @@ export default function Hero() {
     const [transition, setTransition] = useState(true);
     
     useEffect(() => {
+        
         const interval = setInterval(() => {
             setMargin(margin + 80)
             setMarginFirstSecond(marginFirstSecond - 80)
@@ -45,6 +46,7 @@ export default function Hero() {
             clearInterval(interval)
         }
     }, [margin, marginFirstSecond, hedingLeft])
+
     return (
         <>
             <Header />

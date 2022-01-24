@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/header';
-import { galeryProps } from '../PropsConfig/GaleryProps';
-import Galery from './Galery/Galery';
+import ContactForm from './ContactForm/ContactForm';
 
-function GaleryPage() {
+function ContactPage() {
   useEffect(() => {
     window.scrollTo(0,0)
   
@@ -14,9 +13,9 @@ function GaleryPage() {
   }, []);
   return <div>
             <Header />
-            <Galery {...galeryProps}/>
+            <ContactForm />
             <Footer />
         </div>;
 }
 
-export default GaleryPage;
+export default ContactPage;

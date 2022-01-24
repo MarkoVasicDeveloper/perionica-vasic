@@ -42,15 +42,95 @@
         div {
           @include flexCenter();
           transition: 500ms ease;
+          position: relative;
 
-          &:hover {
-            transform: rotateY(20deg);
-            transition: 500ms ease;
-          }
           img {
             width: 80%;
             height: 80%;
             border-radius: 20px;
+            border: 1px solid $secondaryColor;
+            box-shadow: 3px 3px 3px #222222aa;
+          }
+
+          .hover-left {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            bottom: 10%;
+            right: 50%;
+            background-color: #22222255;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+          }
+
+          .hover-right {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            left: 50%;
+            bottom: 10%;
+            background-color: #22222255;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  #galery {
+    padding: 5rem 2rem 2rem 2rem;
+    .galery-container {
+      .btn-back,
+      .btn-forward {
+        height: 100%;
+      }
+      .galery-img {
+        height: 100%;
+        .div-img {
+          div {
+            img {
+              width: 75%;
+            }
+          }
+          .mobileHidden {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #galery {
+    padding: 5rem 0rem 2rem 0rem;
+    // position: relative;
+    .galery-container {
+      .btn-back,
+      .btn-forward {
+        position: absolute;
+      }
+      .btn-back {
+        bottom: -45%;
+        left: 20%;
+      }
+      .btn-forward {
+        bottom: -45%;
+        left: 80%;
+      }
+      .galery-img {
+        width: 100%;
+        .div-img {
+          div {
+            img {
+              width: 75%;
+            }
+          }
+          .mobileHidden {
+            display: none;
           }
         }
       }

@@ -14,7 +14,7 @@ function Footer() {
             <div className="footer-info">
                 <div className="text">
                     +381 (0)60 53 86 187 <br/>
-                    perionicavasic2018@gmail.com
+                    <a href="mailto:perionicavasic2018@gmail.com">perionicavasic2018@gmail.com</a> 
                     <br/><br/>
                     Kneza Milosa 36, Lesnica <br/>
                     Loznica, Republika Srbija <br/>

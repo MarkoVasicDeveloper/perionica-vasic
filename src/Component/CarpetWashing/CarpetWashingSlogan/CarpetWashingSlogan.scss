@@ -37,3 +37,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #carpetWashingSlogan {
+    .carpetWashingSloganDiv {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #carpetWashingSlogan {
+    .carpetWashingSloganDiv {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #carpetWashingSlogan {
+    .carpetWashingSloganDiv {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #carpetWashingSlogan {
+    .carpetWashingSloganDiv {
+      width: 90%;
+    }
+  }
+}

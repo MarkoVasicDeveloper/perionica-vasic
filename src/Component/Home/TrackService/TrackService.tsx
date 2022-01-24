@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './TrackService.scss';
+import img from '../../../Img/bezkontaktno-pranje-kamiona.jpg';
 
 function TrackService() {
     const [animate, setAnimate] = useState(false);
@@ -35,7 +36,8 @@ function TrackService() {
                 </div>
             </div>
             <div className={(animate) ? 'track-photo animateTrack-photo' : 'track-photo'}>
-                <div className="track"></div>
+                {/* <div className="track"></div> */}
+                <img src={img} alt="bezkontaktno-pranje-kamiona.jpg" />
             </div>
         </section>
     )

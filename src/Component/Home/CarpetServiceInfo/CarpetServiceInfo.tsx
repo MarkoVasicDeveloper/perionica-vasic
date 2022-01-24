@@ -1,5 +1,6 @@
 import React from 'react';
 import './CarpetServiceInfo.scss';
+import img from '../../../Img/pranje-tepiha-finish.jpg';
 
 function CarpetServiceInfo() {
     return (
@@ -21,14 +22,16 @@ function CarpetServiceInfo() {
                 </div>
                 <div className='carpetServiceButton'>
                     <button>
-                        <a href="/#">
+                        <a data-testid = 'linkWashCarpet' href="/#/pranje-tepiha">
                             Detaljnije...
                         </a>
                     </button>
                 </div>
                 
             </div>
-            <div className="carpetPhotoInfo"></div>
+            <div className="carpetPhotoInfo">
+                <img src={img} alt="pranje-tepiha-finish.jpg" />
+            </div>
         </section>
     )
 }
