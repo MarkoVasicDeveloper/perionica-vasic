@@ -16,11 +16,27 @@ import img4_3 from "../../../Img/polishing-light-3.jpg";
 import img5_1 from "../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-1.jpg";
 import img5_2 from "../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-2.jpg";
 import img5_3 from "../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-3.jpg";
+
+import img1_Small from "../../../Img/spoljasnje-pranje-vozila-1-small.jpg";
+import img1_2_Small from "../../../Img/spoljasnje-pranje-vozila-2-small.jpg";
+import img1_3_Small from "../../../Img/spoljasnje-pranje-vozila-3-small.jpg";
+import img2_1_Small from "../../../Img/pranje-tepiha-finish-1-small.jpg";
+import img2_2_Small from "../../../Img/pranje-tepiha-finish-2-small.jpg";
+import img2_3_Small from "../../../Img/pranje-tepiha-finish-3-small.jpg";
+import img3_1_Small from "../../../Img/car_polishing-1-small.jpg";
+import img3_2_Small from "../../../Img/car_polishing-2-small.jpg";
+import img3_3_Small from "../../../Img/car_polishing-3-small.jpg";
+import img4_1_Small from "../../../Img/polishing-light-1-small.jpg";
+import img4_2_Small from "../../../Img/polishing-light-2-small.jpg";
+import img4_3_Small from "../../../Img/polishing-light-3-small.jpg";
+import img5_1_Small from "../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-1-small.jpg";
+import img5_2_Small from "../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-2-small.jpg";
+import img5_3_Small from "../../../Img/dubinsko-pranje-masina-za-dubinsko-pranje-3-small.jpg";
 import { HeaderUserProps } from "../../PropsConfig/HeaderUserProps";
 
 export default function Hero() {
   const [margin, setMargin] = useState(-400);
-  const [marginFirstSecond, setMarginFirstSecond] = useState(0);
+  const [marginFirstThird, setMarginFirstThird] = useState(0);
   const [hedingLeft, setHedingLeft] = useState(0);
   const [transition, setTransition] = useState(true);
 
@@ -28,27 +44,27 @@ export default function Hero() {
     const interval = setInterval(
       () => {
         setMargin(margin + 80);
-        setMarginFirstSecond(marginFirstSecond - 80);
+        setMarginFirstThird(marginFirstThird - 80);
         setHedingLeft(hedingLeft - 100);
         if (hedingLeft === -500) {
           setHedingLeft(0);
         }
-        if (marginFirstSecond === -400) {
-          setMarginFirstSecond(0);
+        if (marginFirstThird === -400) {
+          setMarginFirstThird(0);
         }
         if (margin === 0) {
           setMargin(-400);
           setTransition(false);
-        } else {
-          setTransition(true);
+          if (window.innerWidth > 800) return;
         }
+        setTransition(true);
       },
       margin === 0 ? 1000 : 4000
     );
     return () => {
       clearInterval(interval);
     };
-  }, [margin, marginFirstSecond, hedingLeft]);
+  }, [margin, hedingLeft, marginFirstThird]);
 
   return (
     <>
@@ -57,17 +73,53 @@ export default function Hero() {
         <div
           className="partOne"
           style={{
-            marginTop: marginFirstSecond + "vh",
+            marginTop: marginFirstThird + "vh",
             transition: transition ? "1000ms ease" : "none",
           }}
         >
           <div>
-            <div style={{ backgroundImage: `url(${img1})` }}></div>
-            <div style={{ backgroundImage: `url(${img2_1})` }}></div>
-            <div style={{ backgroundImage: `url(${img3_1})` }}></div>
-            <div style={{ backgroundImage: `url(${img4_1})` }}></div>
-            <div style={{ backgroundImage: `url(${img5_1})` }}></div>
-            <div style={{ backgroundImage: `url(${img1})` }}></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img1_Small})` }
+                  : { backgroundImage: `url(${img1})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img2_1_Small})` }
+                  : { backgroundImage: `url(${img2_1})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img3_1_Small})` }
+                  : { backgroundImage: `url(${img3_1})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img4_1_Small})` }
+                  : { backgroundImage: `url(${img4_1})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img5_1_Small})` }
+                  : { backgroundImage: `url(${img5_1})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img1_Small})` }
+                  : { backgroundImage: `url(${img1})` }
+              }
+            ></div>
           </div>
         </div>
         <div
@@ -78,28 +130,100 @@ export default function Hero() {
           }}
         >
           <div>
-            <div style={{ backgroundImage: `url(${img1_2})` }}></div>
-            <div style={{ backgroundImage: `url(${img5_2})` }}></div>
-            <div style={{ backgroundImage: `url(${img4_2})` }}></div>
-            <div style={{ backgroundImage: `url(${img3_2})` }}></div>
-            <div style={{ backgroundImage: `url(${img2_2})` }}></div>
-            <div style={{ backgroundImage: `url(${img1_2})` }}></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img1_2_Small})` }
+                  : { backgroundImage: `url(${img1_2})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img5_2_Small})` }
+                  : { backgroundImage: `url(${img5_2})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img4_2_Small})` }
+                  : { backgroundImage: `url(${img4_2})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img3_2_Small})` }
+                  : { backgroundImage: `url(${img3_2})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img2_2_Small})` }
+                  : { backgroundImage: `url(${img2_2})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img1_2_Small})` }
+                  : { backgroundImage: `url(${img1_2})` }
+              }
+            ></div>
           </div>
         </div>
         <div
           className="partThree"
           style={{
-            marginTop: marginFirstSecond + "vh",
+            marginTop: marginFirstThird + "vh",
             transition: transition ? "1000ms ease" : "none",
           }}
         >
           <div>
-            <div style={{ backgroundImage: `url(${img1_3})` }}></div>
-            <div style={{ backgroundImage: `url(${img2_3})` }}></div>
-            <div style={{ backgroundImage: `url(${img3_3})` }}></div>
-            <div style={{ backgroundImage: `url(${img4_3})` }}></div>
-            <div style={{ backgroundImage: `url(${img5_3})` }}></div>
-            <div style={{ backgroundImage: `url(${img1_3})` }}></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img1_3_Small})` }
+                  : { backgroundImage: `url(${img1_3})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img2_3_Small})` }
+                  : { backgroundImage: `url(${img2_3})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img3_3_Small})` }
+                  : { backgroundImage: `url(${img3_3})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img4_3_Small})` }
+                  : { backgroundImage: `url(${img4_3})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img5_3_Small})` }
+                  : { backgroundImage: `url(${img5_3})` }
+              }
+            ></div>
+            <div
+              style={
+                window.innerWidth < 800
+                  ? { backgroundImage: `url(${img1_3_Small})` }
+                  : { backgroundImage: `url(${img1_3})` }
+              }
+            ></div>
           </div>
         </div>
         <div className="hedings" style={{ left: hedingLeft + "vw" }}>

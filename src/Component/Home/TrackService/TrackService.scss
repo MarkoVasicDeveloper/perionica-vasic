@@ -2,7 +2,7 @@
 
 #track-service {
   width: 100%;
-  height: 80vh;
+  height: auto;
   background-color: $primaryColor;
   @include flexCenter();
   padding: 2rem 5rem;
@@ -24,7 +24,8 @@
   }
 
   .info {
-    height: 80%;
+    height: 500px;
+    width: 100%;
     flex-grow: 1;
     flex-basis: 0;
     border: 1px solid #ffff;
@@ -68,7 +69,8 @@
   }
 
   .track-photo {
-    height: 80%;
+    height: 500px;
+    width: 100%;
     flex-grow: 1;
     flex-basis: 0;
     overflow: hidden;
@@ -103,34 +105,15 @@
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 768px) {
   #track-service {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 760px) {
-  #track-service {
-    height: 120vh;
     flex-direction: column;
-    padding: 2rem;
-
-    .info {
-      .track-title {
-        h2 {
-          margin-top: 1rem;
-        }
-      }
-    }
-
-    .track-photo {
-      width: 100%;
-    }
+    height: 1000px;
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 500px) {
   #track-service {
-    height: 140vh;
+    padding: 2rem;
   }
 }
