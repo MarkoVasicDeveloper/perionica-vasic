@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SliderCarpet.scss";
 import img from "../../../Img/centrifuga-masina-za-cedjenje-tepiha.png";
 import img2 from "../../../Img/kalorifer.png";
@@ -6,47 +6,26 @@ import img3 from "../../../Img/vlagara-masina-za-isusivanje-i-odstanjanje-vlage.
 import img4 from "../../../Img/cetkara-masina-za-cetkanje-tepiha.png";
 
 function SliderCarpet() {
-  const imageDiv = useRef(null) as any;
-  const [margin, setMargin] = useState(0);
-  const [transition, setTransition] = useState(true);
-  const [width, setWidth] = useState(0);
+  const [translate, setTranslate] = useState(0);
+  const [transition, setTransition] = useState("none");
 
   useEffect(() => {
-    window.addEventListener("load", widthOfContainer);
-    window.addEventListener("orientationchange", orientationChangeWidth, true);
-
-    function widthOfContainer() {
-      if (window.screen.availWidth < 768) return setWidth(100);
-      if (window.screen.availWidth > 768) return setWidth(50);
-    }
-
-    function orientationChangeWidth() {
-      if (window.screen.availWidth < 768) {
-        setWidth(100);
-        if (margin > 200) setMargin(0);
-        return;
-      }
-      if (window.screen.availWidth > 768) return setWidth(50);
-    }
-
-    const interval = setInterval(
+    const imageSliderEfect = setInterval(
       () => {
-        if (margin === -(width * 4)) {
-          setTransition(false);
-          setMargin(0);
-        } else {
-          setTransition(true);
-          setMargin(margin - width);
+        if (translate === -80) {
+          setTranslate(0);
+          setTransition("none");
+          return;
         }
+        setTranslate((prevTrans) => prevTrans - 20);
+        setTransition("transform 500ms ease");
       },
-      margin === -(width * 4) ? 500 : 3000
+      translate === -80 ? 500 : 2000
     );
     return () => {
-      clearInterval(interval);
-      window.removeEventListener("load", widthOfContainer);
-      window.removeEventListener("orientationchange", orientationChangeWidth);
+      clearInterval(imageSliderEfect);
     };
-  }, [margin, width]);
+  }, [translate]);
 
   return (
     <section id="sliderCarpet">
@@ -64,12 +43,12 @@ function SliderCarpet() {
           </p>
         </div>
       </div>
-      <div className="slider" ref={imageDiv}>
+      <div className="slider">
         <div
           className="imageContainer"
           style={{
-            marginLeft: margin + "vw",
-            transition: transition ? "500ms ease" : "none",
+            transform: `translateX(${translate}%)`,
+            transition: transition,
           }}
         >
           <div>

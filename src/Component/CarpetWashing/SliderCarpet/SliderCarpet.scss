@@ -2,14 +2,14 @@
 
 #sliderCarpet {
   width: 100%;
-  height: auto;
+  min-height: 80vh;
   background-color: $secondaryColor;
   padding: 7rem 0rem 2rem 0rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 
   .sliderInfo {
-    padding-top: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
     text-align: center;
     font-family: $primaryFont;
     color: $blackFont;
@@ -17,7 +17,7 @@
       width: 80%;
       height: 30%;
       margin: 0 auto;
-      margin-top: 3rem;
+      margin-top: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -28,12 +28,14 @@
       width: 80%;
       height: 70%;
       margin: 0 auto;
+      margin-top: 2rem;
     }
   }
 
   .slider {
+    flex-grow: 1;
+    flex-basis: 0;
     overflow: hidden;
-    width: 50vw;
 
     .imageContainer {
       width: 250vw;
@@ -41,7 +43,7 @@
       display: flex;
       div {
         height: 100%;
-        width: 50vw;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -50,54 +52,26 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   #sliderCarpet {
-    .sliderInfo {
-      padding-top: 0rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  #sliderCarpet {
-    height: 800px;
-    display: flex;
+    min-height: 120vh;
     flex-direction: column;
-    .sliderInfo {
-      width: 100%;
-      flex-grow: 1;
-      flex-basis: 0;
-    }
-
     .slider {
-      width: 100%;
-      margin: 0 auto;
-      flex-grow: 1;
-      flex-basis: 0;
       .imageContainer {
         width: 500vw;
-        div {
-          width: 100vw;
-        }
       }
     }
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 750px) and (orientation: landscape) {
   #sliderCarpet {
-    height: 120vh;
-  }
-}
-
-@media (max-width: 450px) {
-  #sliderCarpet {
-    height: 135vh;
-  }
-}
-
-@media (max-width: 400px) {
-  #sliderCarpet {
-    height: 145vh;
+    min-height: 200vh;
+    flex-direction: column;
+    .slider {
+      .imageContainer {
+        width: 500vw;
+      }
+    }
   }
 }

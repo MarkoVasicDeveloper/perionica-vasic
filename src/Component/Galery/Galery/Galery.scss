@@ -3,7 +3,7 @@
 #galery {
   width: 100%;
   height: 100vh;
-  padding: 3rem 2rem;
+  padding: 3rem 0rem;
 
   background-image: url("../../../Img/car_polishing-blur.jpg");
   background-size: cover;
@@ -29,7 +29,7 @@
     }
 
     .galery-img {
-      flex-grow: 6;
+      flex-grow: 8;
       flex-basis: 0;
       height: 80%;
       display: flex;
@@ -82,12 +82,11 @@
 
 @media (max-width: 860px) {
   #galery {
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 5rem 0rem;
     .galery-container {
       .btn-back,
       .btn-forward {
-        height: 100%;
-        z-index: 10;
+        display: none;
       }
       .galery-img {
         height: 100%;
@@ -108,32 +107,9 @@
 
 @media (max-width: 600px) {
   #galery {
-    padding: 5rem 0rem 2rem 0rem;
     .galery-container {
-      .btn-back,
-      .btn-forward {
-        position: absolute;
-      }
-      .btn-back {
-        bottom: -45%;
-        left: 20%;
-      }
-      .btn-forward {
-        bottom: -45%;
-        left: 80%;
-      }
       .galery-img {
         width: 100%;
-        .div-img {
-          div {
-            img {
-              width: 75%;
-            }
-          }
-          .mobileHidden {
-            display: none;
-          }
-        }
       }
     }
   }
